@@ -1,14 +1,14 @@
 {
-  "name": "vue-markdown-it",
+  "name": "vue-markdown-render",
   "version": "1.0.0",
-  "description": "A simple markdown parser for Vue using markdown-it.",
+  "description": "A simple, lightweight markdown-it wrapper for Vue written in pure typescript.",
   "main": "dist/VueMarkdown.js",
   "types": "dist/VueMarkdown.d.ts",
   "author": "Patrick Kuen <p.kuen@cloudacy.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cloudacy/vue-markdown-it.git"
+    "url": "https://github.com/cloudacy/vue-markdown-render.git"
   },
   "scripts": {
     "build": "tsc"
