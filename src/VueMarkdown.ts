@@ -1,9 +1,31 @@
-import { Component } from "vue";
+import Vue, { VNode } from "vue";
+import MarkdownIt from "markdown-it";
 
-const VueMarkdown: Component = {
-  render(h) {
-    return h("div");
+const VueMarkdown = Vue.extend({
+  name: "VueMarkdown",
+  props: {
+    source: {
+      type: String,
+      required: true
+    }
+  },
+  data() {
+    return {
+      md: null as MarkdownIt | null
+    };
+  },
+  computed: {
+    content(): string | undefined {
+      const src = this.source;
+      return this.md?.render(src);
+    }
+  },
+  created() {
+    this.md = new MarkdownIt();
+  },
+  render(h): VNode {
+    return h("div", { domProps: { innerHTML: this.content } });
   }
-};
+});
 
 export default VueMarkdown;
