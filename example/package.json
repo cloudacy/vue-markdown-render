@@ -10,6 +10,6 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.12"
   }
 }

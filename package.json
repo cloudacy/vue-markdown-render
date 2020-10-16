@@ -15,11 +15,11 @@
   },
   "sideEffects": false,
   "devDependencies": {
-    "typescript": "^3.8.3"
+    "typescript": "^4.0.3"
   },
   "dependencies": {
-    "@types/markdown-it": "^0.0.9",
-    "markdown-it": "^10.0.0",
-    "vue": "^2.6.11"
+    "@types/markdown-it": "^10.0.2",
+    "markdown-it": "^12.0.0",
+    "vue": "^2.6.12"
   }
 }
