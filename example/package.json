@@ -4,12 +4,21 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "serve": "parcel serve src/index.html"
-  },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "serve": "rollup -cw"
   },
   "dependencies": {
     "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-replace": "^2.3.3",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "rollup": "^2.31.0",
+    "rollup-plugin-css-only": "^2.1.0",
+    "rollup-plugin-serve": "^1.0.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.0.3"
   }
 }
