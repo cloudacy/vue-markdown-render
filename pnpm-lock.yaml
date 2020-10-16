@@ -4,6 +4,7 @@ dependencies:
   punycode: 2.1.1
   vue: 2.6.12
 devDependencies:
+  '@types/punycode': 2.1.0
   typescript: 4.0.3
 lockfileVersion: 5.1
 packages:
@@ -22,6 +23,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==
+  /@types/punycode/2.1.0:
+    dev: true
+    resolution:
+      integrity: sha512-PG5aLpW6PJOeV2fHRslP4IOMWn+G+Uq8CfnyJ+PDS8ndCbU+soO+fB3NKCKo0p/Jh2Y4aPaiQZsrOXFdzpcA6g==
   /argparse/2.0.1:
     dev: false
     resolution:
@@ -74,6 +79,7 @@ packages:
       integrity: sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg==
 specifiers:
   '@types/markdown-it': ^10.0.2
+  '@types/punycode': ^2.1.0
   markdown-it: ^12.0.0
   punycode: ^2.1.1
   typescript: ^4.0.3
