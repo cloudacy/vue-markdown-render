@@ -5,6 +5,7 @@ declare const VueMarkdown: import("vue/types/vue").ExtendedVue<Vue, {
 }, unknown, {
     content: string | undefined;
 }, {
+    html: boolean;
     source: string;
 }>;
 export default VueMarkdown;

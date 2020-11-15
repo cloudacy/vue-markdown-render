@@ -28,7 +28,8 @@ const App = Vue.extend({
       ),
       h("vue-markdown", {
         props: {
-          source: `# This is a markdown heading\n## This is your number: ${this.i}`
+          source: `# This is a markdown heading\n## This is your number: ${this.i} \n <h3> Test </h3>`,
+          html: true,
         }
       })
     ]);
