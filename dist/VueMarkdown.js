@@ -6,6 +6,10 @@ var VueMarkdown = Vue.extend({
         source: {
             type: String,
             required: true
+        },
+        options: {
+            type: Object,
+            required: false
         }
     },
     data: function () {
@@ -21,7 +25,7 @@ var VueMarkdown = Vue.extend({
         }
     },
     created: function () {
-        this.md = new MarkdownIt();
+        this.md = new MarkdownIt(this.options);
     },
     render: function (h) {
         return h("div", { domProps: { innerHTML: this.content } });

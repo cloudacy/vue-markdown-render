@@ -1,5 +1,6 @@
-import Vue, { VNode } from "vue";
-import MarkdownIt from "markdown-it";
+import Vue, { PropType, VNode } from "vue";
+import MarkdownIt, {Options as MarkdownItOptions} from "markdown-it";
+export {Options} from 'markdown-it'
 
 const VueMarkdown = Vue.extend({
   name: "VueMarkdown",
@@ -7,6 +8,10 @@ const VueMarkdown = Vue.extend({
     source: {
       type: String,
       required: true
+    },
+    options: {
+      type: Object as PropType<MarkdownItOptions>,
+      required: false
     }
   },
   data() {
@@ -21,7 +26,7 @@ const VueMarkdown = Vue.extend({
     }
   },
   created() {
-    this.md = new MarkdownIt();
+    this.md = new MarkdownIt(this.options);
   },
   render(h): VNode {
     return h("div", { domProps: { innerHTML: this.content } });

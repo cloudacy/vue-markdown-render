@@ -1,5 +1,5 @@
 import Vue, { VNode } from "vue";
-import VueMarkdown from "../../dist/VueMarkdown";
+import VueMarkdown, {Options} from "../../dist/VueMarkdown";
 
 Vue.config.productionTip = false;
 
@@ -10,7 +10,10 @@ const App = Vue.extend({
   },
   data() {
     return {
-      i: 0
+      i: 0,
+      options: {
+        html: true
+      } as Options
     };
   },
   render(h): VNode {
@@ -28,7 +31,8 @@ const App = Vue.extend({
       ),
       h("vue-markdown", {
         props: {
-          source: `# This is a markdown heading\n## This is your number: ${this.i}`
+          source: `# This is a markdown heading\n## This is your number: ${this.i}. <i>HTML is allowed via options</i>`,
+          options: this.options
         }
       })
     ]);
