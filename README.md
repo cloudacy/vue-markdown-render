@@ -29,3 +29,11 @@ export default defineComponent({
 })
 </script>
 ```
+
+## TypeScript
+
+If you are using typescript, you have to add the [@types/markdown-it](https://www.npmjs.com/package/@types/markdown-it) to your **dev dependencies**.
+
+```bash
+npm install @types/markdown-it --save-dev
+```
