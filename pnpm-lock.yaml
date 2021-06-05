@@ -4,13 +4,11 @@ specifiers:
   '@types/markdown-it': ^12.0.1
   '@types/punycode': ^2.1.0
   markdown-it: ^12.0.6
-  punycode: ^2.1.1
   typescript: ^4.3.2
   vue: ^2.6.13
 
 dependencies:
   markdown-it: 12.0.6
-  punycode: 2.1.1
   vue: 2.6.13
 
 devDependencies:
@@ -71,11 +69,6 @@ packages:
 
   /mdurl/1.0.1:
     resolution: {integrity: sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=}
-    dev: false
-
-  /punycode/2.1.1:
-    resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
-    engines: {node: '>=6'}
     dev: false
 
   /typescript/4.3.2:

@@ -6,6 +6,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import css from "rollup-plugin-css-only";
 import json from "@rollup/plugin-json";
 import { terser } from "rollup-plugin-terser";
+import builtins from "rollup-plugin-node-builtins";
 
 export default {
   input: "src/index.ts",
@@ -15,6 +16,7 @@ export default {
     sourcemap: true,
   },
   plugins: [
+    builtins(),
     commonjs(),
     replace({
       preventAssignment: true,
