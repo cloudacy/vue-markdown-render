@@ -12,10 +12,12 @@ export default {
   output: {
     dir: "dist",
     format: "cjs",
+    sourcemap: true,
   },
   plugins: [
     commonjs(),
     replace({
+      preventAssignment: true,
       "process.env.NODE_ENV": "'production'",
     }),
     serve({
