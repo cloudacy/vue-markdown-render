@@ -1,6 +1,6 @@
 {
   "name": "vue-markdown-render",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "A simple, lightweight markdown-it wrapper for Vue written in pure typescript.",
   "main": "dist/VueMarkdown.js",
   "types": "dist/VueMarkdown.d.ts",
