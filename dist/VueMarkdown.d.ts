@@ -1,12 +1,4 @@
-import Vue from "vue";
-import MarkdownIt from "markdown-it";
+import { Component } from 'vue';
 export { Options } from 'markdown-it';
-declare const VueMarkdown: import("vue/types/vue").ExtendedVue<Vue, {
-    md: MarkdownIt | null;
-}, unknown, {
-    content: string | undefined;
-}, {
-    source: string;
-    options: MarkdownIt.Options;
-}>;
+declare const VueMarkdown: Component;
 export default VueMarkdown;
