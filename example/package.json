@@ -1,25 +1,18 @@
 {
-  "name": "vue-markdown-render-example",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "name": "example",
+  "version": "0.0.0",
   "scripts": {
-    "serve": "rollup -cw"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^2.6.14"
+    "vue": "^3.2.25"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^20.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.0.4",
-    "@rollup/plugin-replace": "^3.0.0",
-    "@rollup/plugin-typescript": "^8.2.5",
-    "rollup": "^2.56.3",
-    "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-serve": "^1.1.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "tslib": "^2.3.1"
+    "@vitejs/plugin-vue": "^2.0.0",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vue-tsc": "^0.29.8"
   }
 }

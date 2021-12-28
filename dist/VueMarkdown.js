@@ -1,6 +1,6 @@
-import Vue from 'vue';
+import { h, defineComponent } from 'vue';
 import MarkdownIt from 'markdown-it';
-var VueMarkdown = Vue.extend({
+var VueMarkdown = defineComponent({
     name: 'VueMarkdown',
     props: {
         source: {
@@ -25,10 +25,11 @@ var VueMarkdown = Vue.extend({
         },
     },
     created: function () {
-        this.md = new MarkdownIt(this.options);
+        var _a;
+        this.md = new MarkdownIt((_a = this.options) !== null && _a !== void 0 ? _a : {});
     },
-    render: function (h) {
-        return h('div', { domProps: { innerHTML: this.content } });
+    render: function () {
+        return h('div', { innerHTML: this.content });
     },
 });
 export default VueMarkdown;
