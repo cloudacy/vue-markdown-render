@@ -32,7 +32,7 @@ export default defineComponent({
 
 ### Options
 
-[markdown-it options](https://github.com/markdown-it/markdown-it#init-with-presets-and-options) can be passed as an object into the VueMarkdown Component:
+[markdown-it options](https://github.com/markdown-it/markdown-it#init-with-presets-and-options) can be passed as an object into the VueMarkdown component:
 
 ```vue
  <vue-markdown :source="src" :options="options">
