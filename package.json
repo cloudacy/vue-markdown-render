@@ -15,12 +15,12 @@
   },
   "sideEffects": false,
   "devDependencies": {
-    "@babel/types": "^7.16.0",
+    "@babel/types": "^7.20.7",
     "@types/markdown-it": "^12.2.3",
-    "typescript": "^4.5.4"
+    "typescript": "^4.9.4"
   },
   "dependencies": {
-    "markdown-it": "^12.3.0",
-    "vue": "^3.2.25"
+    "markdown-it": "^12.3.2",
+    "vue": "^3.2.45"
   }
 }
