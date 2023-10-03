@@ -1,5 +1,5 @@
 import { h, PropType, VNode, Component, defineComponent } from 'vue'
-import MarkdownIt, { Options as MarkdownItOptions } from 'markdown-it'
+import MarkdownIt, { Options as MarkdownItOptions, PluginSimple } from 'markdown-it'
 export { Options } from 'markdown-it'
 
 const VueMarkdown: Component = defineComponent({
@@ -13,6 +13,10 @@ const VueMarkdown: Component = defineComponent({
       type: Object as PropType<MarkdownItOptions>,
       required: false,
     },
+    plugins: {
+      type: Array as PropType<PluginSimple[]>,
+      required: false,
+    }
   },
   data() {
     return {
@@ -27,6 +31,9 @@ const VueMarkdown: Component = defineComponent({
   },
   created() {
     this.md = new MarkdownIt(this.options ?? {})
+    for (const plugin of this.plugins ?? []) {
+      this.md.use(plugin)
+    }
   },
   render(): VNode {
     return h('div', { innerHTML: this.content })
