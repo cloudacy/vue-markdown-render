@@ -11,6 +11,10 @@ var VueMarkdown = defineComponent({
             type: Object,
             required: false,
         },
+        plugins: {
+            type: Array,
+            required: false,
+        }
     },
     data: function () {
         return {
@@ -25,8 +29,12 @@ var VueMarkdown = defineComponent({
         },
     },
     created: function () {
-        var _a;
+        var _a, _b;
         this.md = new MarkdownIt((_a = this.options) !== null && _a !== void 0 ? _a : {});
+        for (var _i = 0, _c = (_b = this.plugins) !== null && _b !== void 0 ? _b : []; _i < _c.length; _i++) {
+            var plugin = _c[_i];
+            this.md.use(plugin);
+        }
     },
     render: function () {
         return h('div', { innerHTML: this.content });
