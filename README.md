@@ -38,6 +38,22 @@ export default defineComponent({
  <vue-markdown :source="src" :options="options">
 ```
 
+### Plugins
+
+[markdown-it](https://github.com/markdown-it/markdown-it#plugins-load) compatible simple plugins can be passed as an array into the VueMarkdown component. Example using [MarkdownItAnchor](https://www.npmjs.com/package/markdown-it-anchor)
+```vue
+<template>
+  <vue-markdown :source="markdown" :plugins="plugins" />
+</template>
+
+<script setup>
+import VueMarkdown from 'vue-markdown-render'
+import MarkdownItAnchor from 'markdown-it-anchor';
+
+const plugins = [MarkdownItAnchor];
+</script>
+```
+
 ## TypeScript
 
 If you are using typescript, you have to add the [@types/markdown-it](https://www.npmjs.com/package/@types/markdown-it) to your **dev dependencies**.
