@@ -1,6 +1,6 @@
 import { h, PropType, VNode, Component, defineComponent } from 'vue'
 import MarkdownIt, { Options as MarkdownItOptions, PluginSimple } from 'markdown-it'
-export { Options } from 'markdown-it'
+export type { Options } from 'markdown-it'
 
 const VueMarkdown: Component = defineComponent({
   name: 'VueMarkdown',
