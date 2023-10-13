@@ -1,9 +1,12 @@
-import { h, PropType, VNode, Component, defineComponent } from 'vue'
-import MarkdownIt, { Options as MarkdownItOptions, PluginSimple } from 'markdown-it'
-export type { Options } from 'markdown-it'
+import MarkdownIt, {
+  Options as MarkdownItOptions,
+  PluginSimple,
+} from "markdown-it";
+import { Component, PropType, computed, defineComponent, h, ref } from "vue";
+export type { Options } from "markdown-it";
 
 const VueMarkdown: Component = defineComponent({
-  name: 'VueMarkdown',
+  name: "VueMarkdown",
   props: {
     source: {
       type: String,
@@ -16,28 +19,19 @@ const VueMarkdown: Component = defineComponent({
     plugins: {
       type: Array as PropType<PluginSimple[]>,
       required: false,
-    }
-  },
-  data() {
-    return {
-      md: null as MarkdownIt | null,
-    }
-  },
-  computed: {
-    content(): string | undefined {
-      const src = this.source
-      return this.md?.render(src)
     },
   },
-  created() {
-    this.md = new MarkdownIt(this.options ?? {})
-    for (const plugin of this.plugins ?? []) {
-      this.md.use(plugin)
-    }
-  },
-  render(): VNode {
-    return h('div', { innerHTML: this.content })
-  },
-})
+  setup(props) {
+    const md = ref<MarkdownIt>(new MarkdownIt(props.options ?? {}));
 
-export default VueMarkdown
+    for (const plugin of props.plugins ?? []) {
+      md.value.use(plugin);
+    }
+
+    const content = computed(() => md.value.render(props.source));
+
+    return () => h("div", { innerHTML: content.value });
+  },
+});
+
+export default VueMarkdown;
