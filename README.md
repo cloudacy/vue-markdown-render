@@ -7,7 +7,7 @@
 ```vue
 <template>
   <div>
-    <vue-markdown :source="src">
+    <vue-markdown :source="src" />
   </div>
 </template>
 
@@ -35,7 +35,7 @@ export default defineComponent({
 [markdown-it options](https://github.com/markdown-it/markdown-it#init-with-presets-and-options) can be passed as an object into the VueMarkdown component:
 
 ```vue
- <vue-markdown :source="src" :options="options">
+ <vue-markdown :source="src" :options="options" />
 ```
 
 ### Plugins
