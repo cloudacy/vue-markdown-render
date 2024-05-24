@@ -12,9 +12,6 @@ importers:
         specifier: ^13.0.2
         version: 13.0.2
     devDependencies:
-      '@babel/types':
-        specifier: ^7.24.5
-        version: 7.24.5
       '@types/markdown-it':
         specifier: ^13.0.8
         version: 13.0.8
