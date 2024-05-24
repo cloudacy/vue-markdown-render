@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "strict": true,
-    "noImplicitAny": true,
     "declaration": true,
     "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
+    "verbatimModuleSyntax": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-    "outDir": "dist"
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "outDir": "dist",
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts",
