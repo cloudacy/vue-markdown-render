@@ -15,10 +15,10 @@
   },
   "sideEffects": false,
   "devDependencies": {
-    "@babel/types": "^7.23.0",
-    "@types/markdown-it": "^13.0.2",
-    "typescript": "^5.2.2",
-    "vue": "^3.3.4"
+    "@babel/types": "^7.24.5",
+    "@types/markdown-it": "^13.0.8",
+    "typescript": "^5.4.5",
+    "vue": "^3.4.27"
   },
   "dependencies": {
     "markdown-it": "^13.0.2"
