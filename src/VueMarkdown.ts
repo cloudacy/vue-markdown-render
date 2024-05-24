@@ -1,8 +1,15 @@
 import MarkdownIt, {
-  Options as MarkdownItOptions,
-  PluginSimple,
+  type Options as MarkdownItOptions,
+  type PluginSimple,
 } from "markdown-it";
-import { Component, PropType, computed, defineComponent, h, ref } from "vue";
+import {
+  type Component,
+  type PropType,
+  computed,
+  defineComponent,
+  h,
+  ref,
+} from "vue";
 export type { Options } from "markdown-it";
 
 const VueMarkdown: Component = defineComponent({
