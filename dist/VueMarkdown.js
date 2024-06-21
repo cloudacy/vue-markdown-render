@@ -1,7 +1,7 @@
 import MarkdownIt, {} from "markdown-it";
-import { computed, defineComponent, h, ref } from "vue";
+import { computed, defineComponent, h, shallowRef } from "vue";
 const VueMarkdown = defineComponent((props) => {
-    const md = ref(new MarkdownIt(props.options ?? {}));
+    const md = shallowRef(new MarkdownIt(props.options ?? {}));
     for (const plugin of props.plugins ?? []) {
         md.value.use(plugin);
     }

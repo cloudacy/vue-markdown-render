@@ -2,7 +2,7 @@ import MarkdownIt, {
   type Options as MarkdownItOptions,
   type PluginSimple,
 } from "markdown-it";
-import { computed, defineComponent, h, ref } from "vue";
+import { computed, defineComponent, h, shallowRef } from "vue";
 export type { Options } from "markdown-it";
 
 const VueMarkdown = defineComponent(
@@ -11,7 +11,7 @@ const VueMarkdown = defineComponent(
     options?: MarkdownItOptions;
     plugins?: PluginSimple[];
   }) => {
-    const md = ref(new MarkdownIt(props.options ?? {}));
+    const md = shallowRef(new MarkdownIt(props.options ?? {}));
 
     for (const plugin of props.plugins ?? []) {
       md.value.use(plugin);
