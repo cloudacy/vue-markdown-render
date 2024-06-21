@@ -23,12 +23,12 @@
   },
   "sideEffects": false,
   "devDependencies": {
-    "@types/markdown-it": "^13.0.8",
+    "@types/markdown-it": "^14.1.1",
     "typescript": "^5.4.5",
     "vue": "^3.4.27"
   },
   "dependencies": {
-    "markdown-it": "^13.0.2"
+    "markdown-it": "^14.1.0"
   },
   "peerDependencies": {
     "vue": "^3.3.4"
