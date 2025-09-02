@@ -2,11 +2,11 @@ import { type Options as MarkdownItOptions, type PluginSimple } from "markdown-i
 export type { Options } from "markdown-it";
 declare const VueMarkdown: import("vue").DefineSetupFnComponent<{
     source: string;
-    options?: MarkdownItOptions | undefined;
-    plugins?: PluginSimple[] | undefined;
+    options?: MarkdownItOptions;
+    plugins?: PluginSimple[];
 }, {}, {}, {
     source: string;
-    options?: MarkdownItOptions | undefined;
-    plugins?: PluginSimple[] | undefined;
+    options?: MarkdownItOptions;
+    plugins?: PluginSimple[];
 } & {}, import("vue").PublicProps>;
 export default VueMarkdown;
