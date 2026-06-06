@@ -7,11 +7,11 @@
     "declaration": true,
     "sourceMap": true,
     "verbatimModuleSyntax": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable"],
+    "rootDir": "./src",
     "outDir": "dist",
     "skipLibCheck": true
   },
