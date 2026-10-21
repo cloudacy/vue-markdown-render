@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { shallowMount } from "@vue/test-utils";
-import VueMarkdown from "../../../dist/VueMarkdown";
+import VueMarkdown from "../../../dist/VueMarkdown.js";
 
 describe("VueMarkdown", () => {
   it("renders markdown as HTML", () => {
@@ -30,5 +30,27 @@ describe("VueMarkdown", () => {
 
     // HTML tags should be escaped
     expect(wrapper.html()).toContain("&lt;b&gt;bold&lt;/b&gt;");
+  });
+
+  it("passes the markdown-it instance to simple plugins", () => {
+    const wrapper = shallowMount(VueMarkdown, {
+      props: {
+        source: "# Plugin heading",
+        plugins: [
+          (md) => {
+            md.core.ruler.push("heading_id", (state) => {
+              for (const token of state.tokens) {
+                if (token.type === "heading_open") {
+                  token.attrSet("id", "plugin-heading");
+                }
+              }
+            });
+          },
+        ],
+      },
+    });
+
+    expect(wrapper.find("h1").attributes("id")).toBe("plugin-heading");
+    expect(wrapper.find("h1").text()).toBe("Plugin heading");
   });
 });

@@ -38,6 +38,11 @@ jobs:
       - name: Install example dependencies
         working-directory: ./example
         run: pnpm install
+      - name: Build package
+        run: pnpm build
       - name: Run example tests
         working-directory: ./example
-        run: pnpm test
+        run: pnpm test --run
+      - name: Build example
+        working-directory: ./example
+        run: pnpm build
