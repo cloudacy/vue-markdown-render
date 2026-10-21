@@ -1,9 +1,11 @@
 import MarkdownIt, {
-  type Options as MarkdownItOptions,
-  type PluginSimple,
+  type MarkdownIt as MarkdownItInstance,
+  type MarkdownItOptions,
 } from "markdown-it";
 import { computed, defineComponent, h, shallowRef } from "vue";
-export type { Options } from "markdown-it";
+export type { MarkdownItOptions as Options } from "markdown-it";
+
+type PluginSimple = (md: MarkdownItInstance) => void;
 
 const VueMarkdown = defineComponent(
   (props: {
