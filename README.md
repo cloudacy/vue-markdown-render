@@ -56,9 +56,9 @@ const plugins = [MarkdownItAnchor];
 
 ## Migrating to v3
 
-This package uses [markdown-it 15.0.3](https://github.com/markdown-it/markdown-it/blob/15.0.3/CHANGELOG.md). If you're upgrading from v2:
+This package uses [markdown-it v15](https://github.com/markdown-it/markdown-it). If you're upgrading from v2:
 
-- Use Node.js 20.19 or newer, as required by markdown-it's `entities` dependency
+- Browser usage remains supported. For Node.js environments, markdown-it's `entities` dependency declares a minimum of Node.js 20.19
 - Remove `@types/markdown-it` if it was installed for this package
 - With `options.linkify: true`, bare domains such as `example.com` are no longer linked by default. URLs with a protocol such as `https://example.com` still work. To restore bare-domain linking, pass a plugin that calls `md.linkify.set({ fuzzyLink: true })`
 - Use plugins compatible with markdown-it v15.X. Internal imports such as `markdown-it/lib/*` are no longer available; plugin authors can use the static classes exposed by `MarkdownIt`, such as `MarkdownIt.Token`

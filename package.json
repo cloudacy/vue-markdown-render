@@ -22,9 +22,6 @@
     "build": "tsc"
   },
   "sideEffects": false,
-  "engines": {
-    "node": ">=20.19.0"
-  },
   "devDependencies": {
     "typescript": "^6.0.3",
     "vue": "^3.5.35"
