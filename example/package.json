@@ -1,7 +1,7 @@
 {
   "name": "example",
   "type": "module",
-  "version": "0.0.0",
+  "version": "2.3.1",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
