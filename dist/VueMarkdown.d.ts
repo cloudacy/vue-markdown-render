@@ -1,5 +1,6 @@
-import { type Options as MarkdownItOptions, type PluginSimple } from "markdown-it";
-export type { Options } from "markdown-it";
+import { type MarkdownIt as MarkdownItInstance, type MarkdownItOptions } from "markdown-it";
+export type { MarkdownItOptions as Options } from "markdown-it";
+type PluginSimple = (md: MarkdownItInstance) => void;
 declare const VueMarkdown: import("vue").DefineSetupFnComponent<{
     source: string;
     options?: MarkdownItOptions;
